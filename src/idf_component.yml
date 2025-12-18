@@ -1,0 +1,8 @@
+## IDF Component Manager Manifest File
+dependencies:
+  # Ensure you have a recent IDF
+  idf: ">=5.0"
+
+  # VL53L5CX ToF sensor component
+  rjrp44/vl53l5cx: "^4.0.0"
+    

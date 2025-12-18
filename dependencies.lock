@@ -1,0 +1,21 @@
+dependencies:
+  idf:
+    source:
+      type: idf
+    version: 5.5.0
+  rjrp44/vl53l5cx:
+    component_hash: 6dbc68bb35a424f6f5392834ddab94ad5fac121a0e3f90dde4d2bdff22699b46
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 4.0.0
+direct_dependencies:
+- idf
+- rjrp44/vl53l5cx
+manifest_hash: ab96e33f0891071c647e100adc4581b9c0810ed00b9db4b408374de223d0c754
+target: esp32s3
+version: 2.0.0
