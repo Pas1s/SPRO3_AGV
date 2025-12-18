@@ -19,11 +19,9 @@
 #include "wifi_interface/wifi_lib.h"
 #include "i2c_bus.h"
 
-
 static const char *TAG = "MAIN";
 
 static agv_t agv; // contains battery and motors
-
 
 //initializing the flash so you can write to the microcontroller
 void init_flash(void)
@@ -54,14 +52,13 @@ void app_main(void) {
     }
  
     ESP_ERROR_CHECK(wifi_lib_init());
-    ESP_LOGI(TAG, "Wi-Fi good");
     vTaskDelay(pdMS_TO_TICKS(1000));
 
     wifi_static_ip_t sip = {.enable=false};
     if (wifi_lib_connect(cfg.wifi.ssid, cfg.wifi.password, &sip) != ESP_OK) {
-        ESP_LOGE(TAG, "Wi-Fi failed");
+        ESP_LOGE(TAG, "Wi-Fi connection failed");
         return;
-    } else ESP_LOGI(TAG, "Wi-Fi good");
+    } else ESP_LOGI(TAG, "Wi-Fi connected");
     
     ESP_ERROR_CHECK(gpio_install_isr_service(0)); // install global isr service
     
