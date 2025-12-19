@@ -17,7 +17,7 @@
 // Emergency
 #define EMERGENCY_MOSFET_PIN        GPIO_NUM_40
 #define EMERGENCY_SIGNAL_PIN        GPIO_NUM_21
-#define EMERGENCY_RESET_BTN_PIN     GPIO_NUM_1
+#define EMERGENCY_RESET_BTN_PIN     GPIO_NUM_45
 
 // Package sensor
 #define PACKAGE_SENSOR_PIN      GPIO_NUM_1
