@@ -16,7 +16,7 @@ static const char *TAG = "MOTORS";
 //                                 Direction      Duty  Speed_dps  Speed_mps  Distance
 const motor_values_t stop_values = {MOTOR_FORWARD,   0,    0.0f,      0.0f,      0.0f}; // reseting values
 volatile relay_state_t g_relay_state = RELAY_OFF;
-volatile bool emergency_flag = false;
+volatile bool emergency_flag = true; // Requires pressing the reset button after reboot
 static motors_t* global_motors; 
 
 // Forward declaration
